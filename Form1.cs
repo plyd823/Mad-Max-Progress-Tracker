@@ -42,8 +42,8 @@ namespace Mad_Max_Progress_Tracker
         float wastelandMissionsCompleted = 0;
 
         //In-Game Addresses
-        string SCAVENGING_LOCATIONS_COMPLETED = "base+0x01944730,0x30,0x40,0x18,0x2A0,0x120,0x30,0x1C";
-        string CAMPS_DISMANTLED = "base+0x01881990,0x198,0xA0,0x70,0x8,0x8,0x0,0x1C";
+        string SCAVENGING_LOCATIONS_COMPLETED = "base+0x17CF1A0,0x78,0x30,0x0,0x0,0x0,0x1C";
+        string CAMPS_DISMANTLED = "base+0x017F5158,0xB8,0x68,0x0,0x6DC";
         string STORY_MISSIONS_COMPLETED = "base+0x01944730,0x30,0x70,0xD8,0x10,0x298,0x90,0x6DC";
         string WASTELAND_MISSIONS_COMPLETED = "base+0x01944730,0x28,0x2E0,0x38,0x298,0x1E8,0x8,0x4BC";
 
@@ -63,6 +63,9 @@ namespace Mad_Max_Progress_Tracker
                     
                         //reset all values
                         scavTotal.Text = "N/A";
+                        campsText.Text = "N/A";
+                        storyMissionsText.Text = "N/A";
+                        wastelandMissionsText.Text = "N/A";
                     }));
                 }
                 else
@@ -76,7 +79,7 @@ namespace Mad_Max_Progress_Tracker
                         //
                         //set all values
                         //
-                        
+
                         //Scavenging Locations
                         scavTotalValue = m.ReadFloat(SCAVENGING_LOCATIONS_COMPLETED);
                         scavTotal.Text = scavTotalValue.ToString();
